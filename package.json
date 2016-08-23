@@ -1,0 +1,32 @@
+{
+  "name": "log4js-logstash-redis",
+  "version": "1.0.2",
+  "description": "A simple log appender for log4js that sends the data to logstash by redis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://beyond5959@github.com/beyond5959/log4js-logstash-redis.git"
+  },
+  "keywords": [
+    "log",
+    "log4js",
+    "logstash",
+    "redis"
+  ],
+  "author": {
+    "name": "xin liu",
+    "email": "liuxin5959@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beyond5959/log4js-logstash-redis/issues"
+  },
+  "homepage": "https://github.com/beyond5959/log4js-logstash-redis#readme",
+  "dependencies": {
+    "ioredis": "^2.3.0",
+    "log4js": "^0.6.38"
+  }
+}
