@@ -25,7 +25,7 @@ function logstashRedis(config, layout) {
       "@timestamp" : (new Date(loggingEvent.startTime)).toISOString(),
       "type" : config.logType ? config.logType : config.category,
       "message" : layout(loggingEvent),
-      "fields" : JSON.stringify(config.fields)
+      "fields" : config.fields
     };
     sendLog(redis, config.key, logObject);
   };
