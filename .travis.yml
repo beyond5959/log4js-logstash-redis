@@ -1,6 +1,7 @@
 language: node_js
-before_script:
-  - npm install
+before_install:
+- docker pull redis
+- docker run -d -p 6379:6379 redis
 cache:
   directories:
   - node_modules
