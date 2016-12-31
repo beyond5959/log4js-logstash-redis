@@ -31,7 +31,7 @@ Plain javascript
           "type": "log4js-logstash-redis",
           "key": "YOURKEY",
           "redis": {
-              "host": "locahost",
+              "host": "localhost",
               "port": 6379,
               "db": 0 // default 0
           }
