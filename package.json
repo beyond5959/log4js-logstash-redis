@@ -4,7 +4,7 @@
   "description": "A simple log appender for log4js that sends the data to logstash by redis.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/istanbul cover _mocha"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,10 @@
   "dependencies": {
     "ioredis": "^2.3.0",
     "log4js": "^1.1.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "power-assert": "^1.4.2"
   }
 }

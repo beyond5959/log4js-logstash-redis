@@ -1,4 +1,8 @@
-# log4js-logstash-redis
+# log4js-logstash-redis [![node version][node-image]][node-url]
+
+[node-image]: https://img.shields.io/badge/node.js-%3E=_6.0-green.svg?style=flat-square
+[node-url]: http://nodejs.org/download/
+
 A simple log appender for log4js that sends the data to logstash by redis.
 
 

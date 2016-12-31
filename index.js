@@ -19,11 +19,11 @@ function logstashRedis(config, layout) {
     config.fields.level = loggingEvent.level.levelStr;
 
     const logObject = {
-      "@version" : "1",
-      "@timestamp" : (new Date(loggingEvent.startTime)).toISOString(),
-      "type" : config.logType ? config.logType : config.category,
-      "message" : layout(loggingEvent),
-      "fields" : config.fields
+      '@version': '1',
+      '@timestamp': (new Date(loggingEvent.startTime)).toISOString(),
+      type: config.logType ? config.logType : config.category,
+      message: layout(loggingEvent),
+      fields: config.fields
     };
     sendLog(redis, config.key, logObject);
   };
