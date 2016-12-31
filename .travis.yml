@@ -1,4 +1,7 @@
+sudo: required
 language: node_js
+services:
+  - docker
 before_install:
 - docker pull redis
 - docker run -d -p 6379:6379 redis
