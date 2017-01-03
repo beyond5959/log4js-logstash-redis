@@ -1,3 +1,5 @@
+'use strict';
+
 const Redis = require('ioredis');
 const util = require('util');
 const layouts = require('log4js').layouts;
