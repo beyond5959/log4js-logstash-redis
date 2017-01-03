@@ -3,8 +3,8 @@
 [![build status][travis-image]][travis-url]
 [![David deps][david-image]][david-url]
 
-[node-image]: https://img.shields.io/badge/node.js-%3E=_6.0-green.svg?style=flat-square
-[node-url]: http://nodejs.org/download/
+[node-image]: https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square
+[node-url]: https://nodejs.org/en/download/
 [travis-image]: https://travis-ci.org/beyond5959/log4js-logstash-redis.svg?branch=master
 [travis-url]: https://travis-ci.org/beyond5959/log4js-logstash-redis
 [david-image]:https://david-dm.org/beyond5959/log4js-logstash-redis.svg
