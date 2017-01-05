@@ -36,20 +36,20 @@ Usage: log4js configuration
 ---------------------------
 Plain javascript
 ```javascript
-  const log4js = require('log4js');
-  log4js.configure({
-      "appenders": [{
-          "type": "log4js-logstash-redis",
-          "key": "YOURKEY",
-          "redis": {
-              "host": "localhost",
-              "port": 6379,
-              "db": 0 // default 0
-          }
-      }]
-  });
+const log4js = require('log4js');
+log4js.configure({
+  appenders: [{
+    type: 'log4js-logstash-redis',
+    key: 'YOURKEY',
+    redis: {
+      host: 'localhost',
+      port: 6379,
+      db: 0 // default 0
+    },
+  }],
+});
 
-  const logger = log4js.getLogger('tests');
+const logger = log4js.getLogger('tests');
 
-  logger.debug('hello hello');
+logger.debug('hello hello');
 ```
