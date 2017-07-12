@@ -19,6 +19,7 @@ function logstashRedis(config, layout) {
       }
     }
     config.fields.level = loggingEvent.level.levelStr;
+    config.fields.category = loggingEvent.categoryName;
 
     const logObject = {
       '@version': '1',
