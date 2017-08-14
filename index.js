@@ -40,13 +40,12 @@ function sendLog(redis, key, logObject) {
   });
 }
 
-function configure(config) {
-  let layout;
+function configure(config, layouts) {
+  let layout = layouts.dummyLayout;
   if (config.layout) {
     layout = layouts.layout(config.layout.type, config.layout);
   }
   return logstashRedis(config, layout);
 }
 
-exports.appender = logstashRedis;
 exports.configure = configure;

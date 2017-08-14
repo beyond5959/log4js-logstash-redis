@@ -38,18 +38,21 @@ Plain javascript
 ```javascript
 const log4js = require('log4js');
 log4js.configure({
-  appenders: [{
-    type: 'log4js-logstash-redis',
-    key: 'YOURKEY',
-    redis: {
-      host: 'localhost',
-      port: 6379,
-      db: 0 // default 0
+  appenders: {
+    logstash_redis: {
+      type: 'log4js-logstash-redis',
+      key: 'YOURKEY',
+      redis: {
+        host: 'localhost',
+        port: 6379,
+        db: 0 // default 0
+      },
     },
-  }],
+  },
+  categories: { default: { appenders: [ 'logstash_redis' ], level: 'debug' }}
 });
 
-const logger = log4js.getLogger('tests');
+const logger = log4js.getLogger();
 
 logger.debug('hello hello');
 ```

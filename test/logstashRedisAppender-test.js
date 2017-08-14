@@ -18,13 +18,16 @@ describe('logstashRedis appender', () => {
     Redis = new redis(redisConf);
 
     log4js.configure({
-      appenders: [{
-        type: path.resolve(__dirname, '../'),
-        key: redisKey,
-        redis: redisConf,
-      }],
+      appenders: {
+       logstash: {
+         type: path.resolve(__dirname, '../'),
+         key: redisKey,
+         redis: redisConf,
+       },
+      },
+      categories: { default: { appenders: [ 'logstash' ], level: 'debug' }}
     });
-    logger = log4js.getLogger('tests');
+    logger = log4js.getLogger();
     done();
   });
 
@@ -46,7 +49,7 @@ describe('logstashRedis appender', () => {
     });
 
     setTimeout(() => {
-      logger.debug(testStr);
-    }, 10);
+      logger.info(testStr);
+    }, 50);
   });
 });
