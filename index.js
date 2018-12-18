@@ -32,6 +32,9 @@ function logstashRedis(config, layout) {
 }
 
 function sendLog(redis, key, logObject) {
+  if (logObject.message instanceof Error && logObject.message.stack) {
+    logObject.message = logObject.message.stack
+  }
   const logString = JSON.stringify(logObject);
   redis.rpush(key, logString, function (err, result) {
     if (err) {
